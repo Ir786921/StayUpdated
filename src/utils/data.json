@@ -1,0 +1,133 @@
+[
+    {
+      "image": "https://via.placeholder.com/400",
+      "title": "How AI is Transforming Business",
+      "description": "Discover how Artificial Intelligence is reshaping businesses across various industries.",
+      "slug": "ai-business",
+      "relatedPost": [
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "Top AI Tools Every Business Should Use",
+          "description": "Explore essential AI-powered tools that are revolutionizing business operations and customer engagement.",
+          "slug": "top-ai-tools-business"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "AI in Marketing: Boosting ROI with Smart Automation",
+          "description": "Learn how AI is enhancing marketing strategies, improving customer targeting, and maximizing ROI.",
+          "slug": "ai-marketing-roi"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "The Future of Work: AI and Job Automation",
+          "description": "Understand the impact of AI on jobs, the future workforce, and how businesses are adapting to the change.",
+          "slug": "future-work-ai"
+        }
+      ]
+    },
+    {
+      "image": "https://via.placeholder.com/400",
+      "title": "AI in Healthcare: Innovations & Impacts",
+      "description": "Explore how AI is revolutionizing diagnostics, treatment plans, and patient care in the healthcare industry.",
+      "slug": "ai-healthcare",
+      "relatedPost": [
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "AI-Powered Diagnostics: Saving Lives Faster",
+          "description": "A look into how machine learning models are detecting diseases earlier and more accurately.",
+          "slug": "ai-diagnostics"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "How AI is Personalizing Patient Treatment",
+          "description": "Learn how AI algorithms are helping doctors create customized treatment plans for better outcomes.",
+          "slug": "ai-patient-treatment"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "The Ethics of AI in Medicine",
+          "description": "A deep dive into the ethical concerns of using AI in life-and-death decisions.",
+          "slug": "ai-ethics-medicine"
+        }
+      ]
+    },
+    {
+      "image": "https://via.placeholder.com/400",
+      "title": "AI in Education: Smarter Learning Tools",
+      "description": "Discover how AI is personalizing learning, automating grading, and enhancing student engagement.",
+      "slug": "ai-education",
+      "relatedPost": [
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "Adaptive Learning Platforms with AI",
+          "description": "How AI adjusts content delivery to match individual learning speeds and styles.",
+          "slug": "adaptive-learning-ai"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "Virtual Tutors: The Rise of AI Teaching Assistants",
+          "description": "AI-powered tutors are helping students master subjects with real-time feedback and support.",
+          "slug": "ai-virtual-tutors"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "Can AI Replace Teachers?",
+          "description": "Analyzing the role of human educators in an AI-driven educational system.",
+          "slug": "ai-vs-teachers"
+        }
+      ]
+    },
+    {
+      "image": "https://via.placeholder.com/400",
+      "title": "AI in Finance: Smarter Investments",
+      "description": "See how AI is enhancing fraud detection, algorithmic trading, and financial planning.",
+      "slug": "ai-finance",
+      "relatedPost": [
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "AI and Algorithmic Trading",
+          "description": "Discover how AI-powered algorithms are changing the pace and accuracy of trading.",
+          "slug": "ai-trading"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "AI for Fraud Detection in Banks",
+          "description": "Banks are using AI to monitor transactions and detect fraudulent activities in real-time.",
+          "slug": "ai-fraud-detection"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "Smart Financial Planning with AI",
+          "description": "AI is helping users make better investment choices and manage finances effectively.",
+          "slug": "ai-financial-planning"
+        }
+      ]
+    },
+    {
+      "image": "https://via.placeholder.com/400",
+      "title": "AI in E-Commerce: Personalization at Scale",
+      "description": "Learn how AI is transforming the online shopping experience with personalized recommendations and smart logistics.",
+      "slug": "ai-ecommerce",
+      "relatedPost": [
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "Product Recommendations with AI",
+          "description": "Explore how recommendation engines drive more sales by understanding customer behavior.",
+          "slug": "ai-product-recommendations"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "AI-Driven Customer Support Chatbots",
+          "description": "Enhance customer experience with 24/7 AI chatbots handling common queries and returns.",
+          "slug": "ai-chatbots-ecommerce"
+        },
+        {
+          "image": "https://via.placeholder.com/400",
+          "title": "Logistics Optimization Using AI",
+          "description": "AI is streamlining warehousing, delivery, and supply chain efficiency in e-commerce.",
+          "slug": "ai-logistics-ecommerce"
+        }
+      ]
+    }
+  ]
+  
