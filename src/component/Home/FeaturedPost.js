@@ -212,45 +212,7 @@ const FeaturedPost = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="md:flex">
-                <div className="md:w-1/3 relative h-64 md:h-auto">
-                  <Image 
-                    src="/api/placeholder/400/600"
-                    alt="Blog Author"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-8 md:w-2/3">
-                  <motion.div
-                    initial="hidden"
-                    animate={isVisible ? "visible" : "hidden"}
-                    variants={fadeIn}
-                  >
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4">About Mindful Musings</h2>
-                    <p className="text-gray-600 mb-6">
-                      Welcome to Mindful Musings, a sanctuary for thoughtful exploration and gentle contemplation. 
-                      Here, we believe in the power of mindful living, creative expression, and continuous learning.
-                    </p>
-                    <p className="text-gray-600 mb-6">
-                      Our journey began in 2023 with a simple mission: to create a space where ideas flow freely,
-                      where we can pause amidst life is chaos to reflect on what truly matters.
-                    </p>
-                    <Link href="/about" className="inline-flex items-center text-purple-700 hover:text-purple-800 font-medium transition-colors duration-300">
-                      Learn More About Us
-                      <i className="fa-solid fa-arrow-right ml-2"></i>
-                    </Link>
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+   
 
       {/* Newsletter Signup */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
