@@ -1,5 +1,5 @@
 "use client";
-import { Menu, Search, X } from "lucide-react";
+import { Menu, Plus, Search, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { useSearch } from "./context/searchContext";
@@ -20,6 +20,10 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-6">
           <Link href="/blog" className="text-gray-700 hover:text-blue-500 transition">Articles</Link>
           <Link href="/newsletter" className="text-gray-700 hover:text-blue-500 transition">Newsletter</Link>
+          <Link href="/create-blog" className="hover:text-blue-100 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition flex items-center justify-center">
+          <Plus className="w-4 h-4 mr-2" />
+          Start Writing</Link>
+
           <div className="relative">
             <input
               type="text"

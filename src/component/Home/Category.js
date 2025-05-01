@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import {motion} from "framer-motion"
+import {
+  Brain,
+  Leaf,
+  HeartPulse,
+  Book,
+  Coffee,
+  ListChecks,
+} from 'lucide-react';
 
 const Category = () => {
         const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,14 +31,17 @@ const Category = () => {
           }
         }
       };
+    
+      
       const categories = [
-        { name: 'Mindfulness', icon: 'fa-solid fa-brain', color: 'bg-purple-100 text-purple-600' },
-        { name: 'Sustainability', icon: 'fa-solid fa-leaf', color: 'bg-green-100 text-green-600' },
-        { name: 'Psychology', icon: 'fa-solid fa-heart-pulse', color: 'bg-red-100 text-red-600' },
-        { name: 'Books', icon: 'fa-solid fa-book', color: 'bg-blue-100 text-blue-600' },
-        { name: 'Lifestyle', icon: 'fa-solid fa-mug-hot', color: 'bg-yellow-100 text-yellow-600' },
-        { name: 'Productivity', icon: 'fa-solid fa-list-check', color: 'bg-indigo-100 text-indigo-600' },
+        { name: 'Technology', icon: <Brain/>, color: 'bg-purple-100 text-purple-600' },
+        { name: 'Healthcare', icon: <Leaf/>, color: 'bg-green-100 text-green-600' },
+        { name: 'Grooming', icon: <HeartPulse/>, color: 'bg-red-100 text-red-600' },
+        { name: 'Books', icon: <Book/>, color: 'bg-blue-100 text-blue-600' },
+        { name: 'Lifestyle', icon: <Coffee/>, color: 'bg-yellow-100 text-yellow-600' },
+        { name: 'Fashion', icon: <ListChecks/>, color: 'bg-indigo-100 text-indigo-600' },
       ];
+      
   return (
     <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
@@ -51,8 +62,8 @@ const Category = () => {
             variants={fadeIn}
             className={`${category.color} rounded-lg p-6 text-center hover:shadow-md transition-all duration-300 transform hover:-translate-y-1`}
           >
-            <div className="mb-4">
-              <i className={`${category.icon} text-3xl`}></i>
+            <div className="mb-4 items-center flex justify-center">
+              {category.icon}
             </div>
             <h3 className="font-bold">{category.name}</h3>
           </motion.div>

@@ -174,42 +174,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-            Meet Our Team
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="relative h-64">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-bold text-gray-800 mb-1">
-                    {member.name}
-                  </h4>
-                  <p className="text-blue-600 font-medium mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-600 mb-4">{member.bio}</p>
-                  <Link
-                    href="/team"
-                    className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
-                  >
-                    <span>Full Profile</span>
-                    <i className="fa-solid fa-arrow-right ml-2"></i>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+
 
           <div className="text-center mt-12">
             <Link

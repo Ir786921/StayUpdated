@@ -40,7 +40,7 @@ const FeaturedPost = () => {
           category: 'Mindfulness',
           author: 'Emma Thompson',
           date: 'April 25, 2025',
-          image: '/api/placeholder/800/500'
+          image: '/blog1.webp'
         },
         {
           id: 2,
@@ -49,7 +49,7 @@ const FeaturedPost = () => {
           category: 'Sustainability',
           author: 'Michael Chen',
           date: 'April 22, 2025',
-          image: '/api/placeholder/800/500'
+          image: '/blog2.jpeg'
         },
       ];
       const latestPosts = [
@@ -60,7 +60,7 @@ const FeaturedPost = () => {
           category: 'Psychology',
           author: 'Dr. Sarah Johnson',
           date: 'April 20, 2025',
-          image: '/api/placeholder/400/300'
+          image: '/blog3.jpeg'
         },
         {
           id: 4,
@@ -69,7 +69,7 @@ const FeaturedPost = () => {
           category: 'Books',
           author: 'James Wilson',
           date: 'April 18, 2025',
-          image: '/api/placeholder/400/300'
+          image: '/blog4.jpeg'
         },
         {
           id: 5,
@@ -78,7 +78,7 @@ const FeaturedPost = () => {
           category: 'Lifestyle',
           author: 'Olivia Martinez',
           date: 'April 15, 2025',
-          image: '/api/placeholder/400/300'
+          image: '/blog5.jpeg'
         },
         {
           id: 6,
@@ -87,7 +87,7 @@ const FeaturedPost = () => {
           category: 'Productivity',
           author: 'Alex Turner',
           date: 'April 12, 2025',
-          image: '/api/placeholder/400/300'
+          image: '/blog6.jpeg'
         },
         {
           id: 7,
@@ -96,7 +96,7 @@ const FeaturedPost = () => {
           category: 'Home & Design',
           author: 'Sophia Lee',
           date: 'April 10, 2025',
-          image: '/api/placeholder/400/300'
+          image: '/blog7.jpeg'
         },
         {
           id: 8,
@@ -105,7 +105,7 @@ const FeaturedPost = () => {
           category: 'Technology',
           author: 'Daniel Brooks',
           date: 'April 8, 2025',
-          image: '/api/placeholder/400/300'
+          image: '/blog8.jpeg'
         },
       ];
   return (
@@ -204,7 +204,7 @@ const FeaturedPost = () => {
           </motion.div>
 
           <div className="text-center mt-12">
-            <Link href="/blog" className="inline-flex items-center text-purple-700 hover:text-purple-800 font-medium transition-colors duration-300">
+            <Link href="/blog" className="inline-flex items-center bg-blue-600 text-white px-4 py-1 rounded-md font-medium transition-colors duration-300">
               View All Posts
               <i className="fa-solid fa-arrow-right ml-2"></i>
             </Link>
