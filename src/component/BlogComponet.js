@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import blogData from  "@/utils/data.json"
 import { useContext } from 'react';
 import { useSearch } from './context/searchContext';
+import { useCreate } from './context/Addtemporarydata';
 
  function BlogCard({ image, title, description, slug }) {
   return (
@@ -30,9 +31,10 @@ import { useSearch } from './context/searchContext';
   export default function BlogList() {
     const {searchText} = useSearch()
     console.log(searchText);
+    const {blogdata} = useCreate()
     
     
-    const newData = blogData.filter((item)=>{
+    const newData = blogdata.filter((item)=>{
       return item?.title?.toLowerCase().includes(searchText.toLowerCase());
     })
     console.log(newData);
@@ -47,7 +49,7 @@ import { useSearch } from './context/searchContext';
             description={post.description}
             slug={post.slug}
           />
-        ))):(blogData.map((post) => (
+        ))):(blogdata.map((post) => (
           <BlogCard
             key={post.slug}
             image={post.image}

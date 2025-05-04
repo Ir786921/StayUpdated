@@ -1,6 +1,8 @@
 "use client"
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
 import { Calendar, Image, AlignLeft, ListFilter, User, FileText, Tag, Save, X, Upload, Layout, Settings, Eye, Share2, ChevronRight, ChevronDown, Plus, PenToolIcon, Calendar1, BookCopy } from 'lucide-react';
+import { POST } from '@/app/api/addblog/route';
+import { useCreate } from './context/Addtemporarydata';
 
 export default function BlogEditor() {
   const [formData, setFormData] = useState({
@@ -26,6 +28,8 @@ export default function BlogEditor() {
     "Lifestyle", "Business", "Art", "Science", 
     "Education", "Personal"
   ];
+
+  const {blogdata,addNewBlogData} = useCreate()
   
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -65,7 +69,55 @@ export default function BlogEditor() {
       reader.readAsDataURL(file);
     }
   };
+
+  async function SendformData(){
+     const data = await fetch("/api/addblog",{
+      method:"POST",
+      headers:{
+        "Content-Type" :"application/json"
+      },
+      body:JSON.stringify(formData)
+
+     },
+    )
+
+    const res = await data.json();
+    addNewBlogData({
+      image:imagePreview,
+      title:formData?.title,
+      description:formData?.excerpt,
+      slug:formData?.title
+      .toLowerCase()                       
+      .trim()                              
+      .replace(/[^\w\s-]/g, '')            
+      .replace(/\s+/g, '-')                
+      .replace(/--+/g, '-'),
+      relatedPost:[]
+    })
+
+  }
   
+  const HandlePublish = ()=>{
+    setShowSuccessMessage(true);
+    setFormData({
+      title: 'Blog title here',
+      excerpt: 'Brief notes about your content goes here',
+      category: 'Technology',
+      author: 'Text author',
+      date: new Date().toISOString().split('T')[0],
+      content: [
+        { type: 'paragraph', content: 'Paragraph will come here...' }
+      ],
+      image: null
+    })
+    setImagePreview("/api/placeholder/600/400")
+
+    SendformData();
+    setTimeout(() => {
+      setShowSuccessMessage(false)
+    }, 5000);
+  }
+
   const handleSubmit = (e) => {
     if (e) e.preventDefault();
     console.log("Blog post data:", formData);
@@ -81,13 +133,13 @@ export default function BlogEditor() {
   const renderContentBlock = (block, index) => {
     switch (block.type) {
       case 'heading':
-        return <h2 key={index} className="text-3xl font-bold mt-8 mb-4 text-white">{block.content || 'Heading'}</h2>;
+        return <h2 key={index} className="text-3xl font-bold mt-8 mb-4 text-white whitespace-normal break-words">{block.content || 'Heading'}</h2>;
       
       case 'subheading':
-        return <h3 key={index} className="text-2xl font-semibold mt-6 mb-3 text-gray-200">{block.content || 'Subheading'}</h3>;
+        return <h3 key={index} className="text-2xl font-semibold mt-6 mb-3 text-gray-200 whitespace-normal break-words">{block.content || 'Subheading'}</h3>;
       
       case 'paragraph':
-        return <p key={index} className="text-lg leading-relaxed mb-4 text-gray-200">{block.content || 'Paragraph text goes here'}</p>;
+        return <p key={index} className="text-lg leading-relaxed mb-4 text-gray-200 whitespace-normal break-words">{block.content || 'Paragraph text goes here'}</p>;
       
       case 'list':
         return (
@@ -100,7 +152,7 @@ export default function BlogEditor() {
       
       case 'quote':
         return (
-          <blockquote key={index} className="border-l-4 border-indigo-500 pl-4 py-2 mb-4 italic text-xl text-gray-200">
+          <blockquote key={index} className="border-l-4 border-indigo-500 pl-4 py-2 mb-4 italic text-xl text-gray-200 whitespace-normal break-words">
             {block.content || 'Quote text'}
           </blockquote>
         );
@@ -294,7 +346,9 @@ export default function BlogEditor() {
       <h1 className="font-medium text-lg tracking-tight">Write and Preview your blog</h1>
     </div>
     <div className="flex space-x-2">
-      <button className="p-2 px-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
+      <button onClick={()=>{
+        HandlePublish();
+      }} className="p-2 px-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
         Publish
       </button>
     </div>
@@ -304,9 +358,9 @@ export default function BlogEditor() {
           <div className="w-full p-8 shadow-sm rounded-sm bg-gradient-to-b from-gray-800 to-gray-900">
             <p className=' bg-gradient-to-r from-indigo-600 to-purple-600 p-1 w-36 text-center px-1 mb-2 rounded-full'>{formData?.category}</p>
             {/* Title */}
-            <h1 className="text-4xl font-bold text-gray-300 mb-2">{formData.title}</h1>
+            <h1 className="text-4xl font-bold text-gray-300 mb-2 whitespace-normal break-words">{formData.title}</h1>
              
-            <p className="text-xl font-bold text-gray-300 mb-2">{formData?.excerpt}</p>
+            <p className="text-xl font-bold text-gray-300 mb-2 whitespace-normal break-words">{formData?.excerpt}</p>
 
             {/* Author */}
            <div className=' flex justify-between'>

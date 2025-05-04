@@ -1,9 +1,10 @@
-"use client"
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/Navbar";
 import SearchContext from "@/component/context/searchContext";
 import Footer from "@/component/Footer";
+import LayoutProvider from "@/component/context/LayoutProvider";
 
 
 
@@ -27,11 +28,7 @@ export default function RootLayout({ children }) {
     <>
     <html>
       <body>
-         <SearchContext>
-         <Navbar  />
-         <main className="pt-20">{children}</main>
-         <Footer/>
-         </SearchContext>
+      <LayoutProvider> {children} </LayoutProvider>
        
          
       </body>
